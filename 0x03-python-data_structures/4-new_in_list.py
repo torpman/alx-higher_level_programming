@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 def new_in_list(my_list, idx, element):
-    copy = my_list.copy()
-    if idx < 0 or idx > len(my_list):
-        return copy
-    copy[idx] = element
-    return copy
+    if my_list is None:
+        pass
+    elif idx >= 0 and idx < len(my_list):
+        cp = my_list[:]
+        cp[idx] = element
+        return cp
+    else:
+        return my_list
